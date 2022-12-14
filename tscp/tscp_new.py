@@ -310,8 +310,18 @@ class TSCP_model(pl.LightningModule):
         return self.model(inputs)
     
     def training_step(self, batch, batch_idx):
+        
+        print("batch", batch)
+        print("batch.shape", batch.shape)
+        
+        
+        print("batch[:,:self.window]", batch[:,:self.window])
+        print("batch[:,:self.window].shape", batch[:,:self.window].shape)
 
-        history, future = batch, batch   
+        print("batch[:,self.window:]", batch[:,self.window:])
+        print("batch[:,self.window:].shape", batch[:,self.window:].shape)
+        
+        history, future = batch[:, :self.window], batch[:, self.window:]   
         history_emb = self.forward(history.float())
         future_emb = self.forward(future.float()) 
 
@@ -328,8 +338,18 @@ class TSCP_model(pl.LightningModule):
         return train_loss
         
     def validation_step(self, batch, batch_idx):
+        
+        print("batch", batch)
+        print("batch.shape", batch.shape)
+        
+        
+        print("batch[:,:self.window]", batch[:,:self.window])
+        print("batch[:,:self.window].shape", batch[:,:self.window].shape)
 
-        history, future = batch, batch
+        print("batch[:,self.window:]", batch[:,self.window:])
+        print("batch[:,self.window:].shape", batch[:,self.window:].shape)
+        
+        history, future = batch[:,:self.window], batch[:,self.window:]
                 
         history_emb = self.forward(history.float())
         future_emb = self.forward(future.float()) 
