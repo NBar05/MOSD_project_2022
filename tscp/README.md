@@ -7,11 +7,17 @@ Open and run all in Google Colab notebooks:
 
 
 
+Replicated results:
+
+| Dataset     | F1 with margin                               |
+| ----------- | ----------------------|----------------------|
+| HASC        | win:60,bs:64    0.4138|win:60,bs:64          |
+| USC         | win:60,bs:64          |win:60,bs:64          |
 
 
 
-
-
+notes:
+- It is recommended to use GPU to obtain results faster
 
 
 
