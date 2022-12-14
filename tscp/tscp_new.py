@@ -131,7 +131,7 @@ class TCN(nn.Module):
                  dilations=(1, 2, 4, 8, 16, 32),
                  use_skip_connections=True,
                  dropout_rate=0.0, 
-                 use_batch_norm: bool = False,
+                 use_batch_norm: bool = True,
                  use_layer_norm: bool = False, 
                  use_weight_norm: bool = False):
 
@@ -196,32 +196,32 @@ class Encoder(nn.Module):
     def forward(self, x):
         out = x
         
-        print("out.shape after initial x", out.shape)
+        #print("out.shape after initial x", out.shape)
         
         if len(out.shape) == 2:
             out = out.unsqueeze(1)
             
-        print("out.shape after unsqueeze(1) if len(out.shape) == 2", out.shape)
+        #print("out.shape after unsqueeze(1) if len(out.shape) == 2", out.shape)
         
         out = self.tcn_layer(out)   
         
-        print("out.shape after self.tcn_layer(out)", out.shape)
+        #print("out.shape after self.tcn_layer(out)", out.shape)
         
         out = out.flatten(1, 2)     
         
-        print("out.shape after out.flatten(1, 2)", out.shape)
+        #print("out.shape after out.flatten(1, 2)", out.shape)
         
         out = self.relu(self.fc1(out)) 
         
-        print("out.shape after self.relu(self.fc1(out))", out.shape)
+        #print("out.shape after self.relu(self.fc1(out))", out.shape)
         
         out = self.relu(self.fc2(out))
         
-        print("out.shape after self.relu(self.fc2(out))", out.shape)
+        #print("out.shape after self.relu(self.fc2(out))", out.shape)
         
         out = self.output_layer(out)
         
-        print("out.shape after self.output_layer(out)", out.shape)
+        #print("out.shape after self.output_layer(out)", out.shape)
         
         return out
     
@@ -311,15 +311,15 @@ class TSCP_model(pl.LightningModule):
     
     def training_step(self, batch, batch_idx):
         
-        print("batch", batch)
-        print("batch.shape", batch.shape)
+        # print("batch", batch)
+        # print("batch.shape", batch.shape)
         
         
-        print("batch[:,:self.window]", batch[:,:self.window])
-        print("batch[:,:self.window].shape", batch[:,:self.window].shape)
+        # print("batch[:,:self.window]", batch[:,:self.window])
+        # print("batch[:,:self.window].shape", batch[:,:self.window].shape)
 
-        print("batch[:,self.window:]", batch[:,self.window:])
-        print("batch[:,self.window:].shape", batch[:,self.window:].shape)
+        # print("batch[:,self.window:]", batch[:,self.window:])
+        # print("batch[:,self.window:].shape", batch[:,self.window:].shape)
         
         history, future = batch[:, :self.window], batch[:, self.window:]   
         history_emb = self.forward(history.float())
@@ -339,15 +339,15 @@ class TSCP_model(pl.LightningModule):
         
     def validation_step(self, batch, batch_idx):
         
-        print("batch", batch)
-        print("batch.shape", batch.shape)
+        # print("batch", batch)
+        # print("batch.shape", batch.shape)
         
         
-        print("batch[:,:self.window]", batch[:,:self.window])
-        print("batch[:,:self.window].shape", batch[:,:self.window].shape)
+        # print("batch[:,:self.window]", batch[:,:self.window])
+        # print("batch[:,:self.window].shape", batch[:,:self.window].shape)
 
-        print("batch[:,self.window:]", batch[:,self.window:])
-        print("batch[:,self.window:].shape", batch[:,self.window:].shape)
+        # print("batch[:,self.window:]", batch[:,self.window:])
+        # print("batch[:,self.window:].shape", batch[:,self.window:].shape)
         
         history, future = batch[:,:self.window], batch[:,self.window:]
                 
