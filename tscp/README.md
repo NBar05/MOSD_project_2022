@@ -20,14 +20,14 @@ Replicated results:
 | Dataset     | F1 with margin        |     F1 with margin   |     F1 with margin   |
 | ----------- | ----------------------|----------------------|----------------------|
 | HASC        | win:60,bs:64    0.4426|win:100,bs:64   0.4507|win:200,bs:64   0.4768|
-| USC         | win:100,bs:8    0.7304|win:200,bs:8          |win:300,bs:8          |
+| USC         | win:100,bs:8    0.7304|win:200,bs:8    0.7437|win:300,bs:8    0.6145|
 
 Additional results: ROC AUC (computed without margin)
 
 | Dataset     | ROC AUC  w/o margin   |ROC AUC  w/o margin   |ROC AUC  w/o margin   |
 | ----------- | ----------------------|----------------------|----------------------|
 | HASC        | win:60,bs:64    0.5962|win:100,bs:64   0.5663|win:200,bs:64   0.6375|
-| USC         | win:100,bs:8    0.8015|win:200,bs:8          |win:300,bs:8          |
+| USC         | win:100,bs:8    0.8015|win:200,bs:8    0.8527|win:300,bs:8    0.7351|
 
 
 For HASC dataset we used 40% quantile to detect change point in terms of cosine distance between embeddings, this value gave us quite close values to those that authors demonstrate in the original paper.
