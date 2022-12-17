@@ -10,6 +10,8 @@ For HASC dataset with corresponding parameters listed in name of the file
 
 For USC dataset with corresponding parameters listed in name of the file
 - TSCP2_dataset_name_USC_win_100_step_20_bs_8_epochs_5_margin_1.ipynb
+- TSCP2_dataset_name_USC_win_200_step_20_bs_8_epochs_5_margin_1.ipynb
+- TSCP2_dataset_name_USC_win_300_step_20_bs_8_epochs_5_margin_1.ipynb
 
 
 
@@ -34,6 +36,7 @@ For USC dataset we used 5% quantile to detect change point in terms of cosine di
 notes:
 - For some reasons performance on the USC is very poor with high margin value, that's why for USC we used very law margin values (1)
 - It is recommended to use GPU to obtain results faster
+
 
 
 
