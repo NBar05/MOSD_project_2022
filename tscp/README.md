@@ -8,6 +8,9 @@ Open and run all in Google Colab notebooks:
 - TSCP2_dataset_name_HASC_win_100_code_size_10_quantile_0_4_train_share_bs_64_step_5_epochs_40.ipynb
 - TSCP2_dataset_name_HASC_win_200_code_size_10_quantile_0_4_train_share_bs_64_step_5_epochs_40.ipynb
 
+# for USC dataset with corresponding parameters listed in name of the file
+- TSCP2_dataset_name_USC_win_100_step_20_bs_8_epochs_5_margin_1.ipynb
+
 
 
 Replicated results:
