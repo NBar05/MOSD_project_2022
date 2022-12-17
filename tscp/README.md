@@ -11,7 +11,14 @@ Replicated results:
 
 | Dataset     | F1 with margin        |     F1 with margin   |     F1 with margin   |
 | ----------- | ----------------------|----------------------|----------------------|
-| HASC        | win:60,bs:64    0.4138|win:100,bs:64   0.4110|win:200,bs:64   0.4768|
+| HASC        | win:60,bs:64    0.4426|win:100,bs:64   0.4507|win:200,bs:64   0.4768|
+| USC         | win:100,bs:8          |win:200,bs:8          |win:300,bs:8          |
+
+Additional results: ROC AUC (computed without margin)
+
+| Dataset     | ROC AUC  w/o margin   |ROC AUC  w/o margin   |ROC AUC  w/o margin   |
+| ----------- | ----------------------|----------------------|----------------------|
+| HASC        | win:60,bs:64    0.5962|win:100,bs:64   0.5663|win:200,bs:64   0.6375|
 | USC         | win:100,bs:8          |win:200,bs:8          |win:300,bs:8          |
 
 
