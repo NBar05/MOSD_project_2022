@@ -5,12 +5,21 @@ Open and run all in Google Colab notebooks:
 
 For HASC dataset with corresponding parameters listed in name of the file
 - TSCP2_dataset_name_HASC_win_60_code_size_10_quantile_0_4_train_share_bs_64_step_5_epochs_40.ipynb
+checkpoint: https://drive.google.com/file/d/1RMyWp6agAlIBDnm37-A92xj5uJ1SyWAn/view?usp=sharing
+
 - TSCP2_dataset_name_HASC_win_100_code_size_10_quantile_0_4_train_share_bs_64_step_5_epochs_40.ipynb
+checkpoint: https://drive.google.com/file/d/1H2_Ak-Dc1msWsV-u95f5yi-J93NhI-Lh/view?usp=sharing
+
 - TSCP2_dataset_name_HASC_win_200_code_size_10_quantile_0_4_train_share_bs_64_step_5_epochs_40.ipynb
+checkpoint: https://drive.google.com/file/d/1_96WTVhmS7YheuizryHb5APilVIq4Ycm/view?usp=share_link
 
 For USC dataset with corresponding parameters listed in name of the file
 - TSCP2_dataset_name_USC_win_100_step_20_bs_8_epochs_5_margin_1.ipynb
+checkpoint: https://drive.google.com/file/d/1-BfY0hqvNK4FMXG22MpgTghYQfnPel9i/view?usp=sharing
+
 - TSCP2_dataset_name_USC_win_200_step_20_bs_8_epochs_5_margin_1.ipynb
+checkpoint: https://drive.google.com/file/d/1-DyJyTCWkTaDktdMGgKSnDPUES6LmKTp/view?usp=share_link
+
 - TSCP2_dataset_name_USC_win_400_step_20_bs_32_epochs_5_margin_1.ipynb
 
 
